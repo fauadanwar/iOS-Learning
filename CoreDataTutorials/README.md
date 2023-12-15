@@ -5,5 +5,5 @@ This repository  contains sample applications for CoreData learning
   *	FZTransformable class helps to Store image as transformable data type.
   *	CoreDataManager class handle Adding, deleting and fetching data from Event and Location table.
   *	Fetch Request Template is added to CoreDataMDA data model to fetch Location data.
-
+- CoreDataDeepDive application handle CRED, Relationships, Migrations and Syncing of data with online response.
 
