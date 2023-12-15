@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		180F23752B1880D800F6FFEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23742B1880D800F6FFEC /* AppDelegate.swift */; };
 		180F23772B1880D800F6FFEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23762B1880D800F6FFEC /* SceneDelegate.swift */; };
-		180F23792B1880D800F6FFEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23782B1880D800F6FFEC /* ViewController.swift */; };
+		180F23792B1880D800F6FFEC /* EmployeeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23782B1880D800F6FFEC /* EmployeeDetailVC.swift */; };
 		180F237C2B1880D800F6FFEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180F237A2B1880D800F6FFEC /* Main.storyboard */; };
 		180F237F2B1880D800F6FFEC /* CoreDataDeepDive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 180F237D2B1880D800F6FFEC /* CoreDataDeepDive.xcdatamodeld */; };
 		180F23812B1880D900F6FFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180F23802B1880D900F6FFEC /* Assets.xcassets */; };
@@ -17,6 +17,43 @@
 		180F238F2B1880D900F6FFEC /* CoreDataDeepDiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F238E2B1880D900F6FFEC /* CoreDataDeepDiveTests.swift */; };
 		180F23992B1880D900F6FFEC /* CoreDataDeepDiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23982B1880D900F6FFEC /* CoreDataDeepDiveUITests.swift */; };
 		180F239B2B1880D900F6FFEC /* CoreDataDeepDiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F239A2B1880D900F6FFEC /* CoreDataDeepDiveUITestsLaunchTests.swift */; };
+		180F23A82B1885A400F6FFEC /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23A72B1885A400F6FFEC /* PersistentStorage.swift */; };
+		180F23AA2B18AD3400F6FFEC /* EmployeeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23A92B18AD3400F6FFEC /* EmployeeDataRepository.swift */; };
+		180F23AD2B18B46600F6FFEC /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23AC2B18B46600F6FFEC /* SegueIdentifier.swift */; };
+		180F23B12B18B4B800F6FFEC /* EmployeeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23B02B18B4B800F6FFEC /* EmployeeManager.swift */; };
+		180F23B42B18B4D900F6FFEC /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23B32B18B4D900F6FFEC /* Employee.swift */; };
+		180F23B82B18B51900F6FFEC /* EmployeeListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23B72B18B51900F6FFEC /* EmployeeListVCExtension.swift */; };
+		180F23BB2B18B53A00F6FFEC /* CreateEmployeeVCExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23BA2B18B53A00F6FFEC /* CreateEmployeeVCExtensions.swift */; };
+		180F23BD2B18B54D00F6FFEC /* EmployeeDetailExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23BC2B18B54C00F6FFEC /* EmployeeDetailExtensions.swift */; };
+		180F23BF2B18B57D00F6FFEC /* CreateEmployeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23BE2B18B57D00F6FFEC /* CreateEmployeeVC.swift */; };
+		180F23C12B18B5A900F6FFEC /* EmployeeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23C02B18B5A900F6FFEC /* EmployeeListVC.swift */; };
+		180F23CF2B19B7FA00F6FFEC /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23CE2B19B7FA00F6FFEC /* Passport.swift */; };
+		180F23D12B19B8D900F6FFEC /* CDEmployeeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23D02B19B8D900F6FFEC /* CDEmployeeExtension.swift */; };
+		180F23D42B19B90F00F6FFEC /* CDPassportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23D32B19B90F00F6FFEC /* CDPassportExtension.swift */; };
+		185B06FF2B2C2CDA00F11F96 /* DepartmentDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B06FE2B2C2CDA00F11F96 /* DepartmentDataRepository.swift */; };
+		185B07012B2C2D1400F11F96 /* CDDepartmentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07002B2C2D1400F11F96 /* CDDepartmentExtension.swift */; };
+		185B07032B2C2D4400F11F96 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07022B2C2D4400F11F96 /* Department.swift */; };
+		185B07052B2C349B00F11F96 /* DepartmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07042B2C349B00F11F96 /* DepartmentManager.swift */; };
+		185B07072B2C382600F11F96 /* DepartmentListTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07062B2C382600F11F96 /* DepartmentListTC.swift */; };
+		185B07092B2C384B00F11F96 /* DepartmentListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07082B2C384B00F11F96 /* DepartmentListVCExtension.swift */; };
+		185B070B2B2C38CF00F11F96 /* DepartmentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B070A2B2C38CF00F11F96 /* DepartmentListVC.swift */; };
+		186255BC2B285AB400AADE2A /* CDVehicleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186255BB2B285AB400AADE2A /* CDVehicleExtension.swift */; };
+		186255BE2B285B8C00AADE2A /* VehicleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186255BD2B285B8C00AADE2A /* VehicleManager.swift */; };
+		186255C02B285C3300AADE2A /* VehicleListTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186255BF2B285C3300AADE2A /* VehicleListTC.swift */; };
+		186255C22B285E8400AADE2A /* VehicleListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186255C12B285E8400AADE2A /* VehicleListVCExtension.swift */; };
+		186255C42B28614700AADE2A /* VehicleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186255C32B28614700AADE2A /* VehicleListVC.swift */; };
+		186255C62B28CC8000AADE2A /* VehicleTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186255C52B28CC8000AADE2A /* VehicleTC.swift */; };
+		18C158DD2B2848210086679F /* VehicleDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C158DC2B2848210086679F /* VehicleDataRepository.swift */; };
+		18E3B0FA2B1DEFAE00F8053A /* BaseDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B0F92B1DEFAE00F8053A /* BaseDataRepository.swift */; };
+		18E3B0FC2B1DF35F00F8053A /* CDRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B0FB2B1DF35F00F8053A /* CDRecord.swift */; };
+		18E3B0FE2B1DF84200F8053A /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B0FD2B1DF84200F8053A /* Record.swift */; };
+		18E3B1002B1DFA1B00F8053A /* PassportDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B0FF2B1DFA1B00F8053A /* PassportDataRepository.swift */; };
+		18E3B1022B1E0DDA00F8053A /* PassportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B1012B1E0DDA00F8053A /* PassportManager.swift */; };
+		18E3B1042B1E0E6400F8053A /* PassportListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B1032B1E0E6400F8053A /* PassportListVC.swift */; };
+		18E3B1062B1E0ED500F8053A /* PassportListVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B1052B1E0ED500F8053A /* PassportListVCExtension.swift */; };
+		18E3B1082B1E0EFF00F8053A /* PassportListTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B1072B1E0EFF00F8053A /* PassportListTC.swift */; };
+		18E3B10B2B1E0F1F00F8053A /* EmployeeListTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B10A2B1E0F1F00F8053A /* EmployeeListTC.swift */; };
+		18E3B1112B20982100F8053A /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3B1102B20982100F8053A /* Vehicle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +77,7 @@
 		180F23712B1880D800F6FFEC /* CoreDataDeepDive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDeepDive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180F23742B1880D800F6FFEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		180F23762B1880D800F6FFEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		180F23782B1880D800F6FFEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		180F23782B1880D800F6FFEC /* EmployeeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailVC.swift; sourceTree = "<group>"; };
 		180F237B2B1880D800F6FFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		180F237E2B1880D800F6FFEC /* CoreDataDeepDive.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataDeepDive.xcdatamodel; sourceTree = "<group>"; };
 		180F23802B1880D900F6FFEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +88,44 @@
 		180F23942B1880D900F6FFEC /* CoreDataDeepDiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDeepDiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		180F23982B1880D900F6FFEC /* CoreDataDeepDiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeepDiveUITests.swift; sourceTree = "<group>"; };
 		180F239A2B1880D900F6FFEC /* CoreDataDeepDiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeepDiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		180F23A72B1885A400F6FFEC /* PersistentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		180F23A92B18AD3400F6FFEC /* EmployeeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataRepository.swift; sourceTree = "<group>"; };
+		180F23AC2B18B46600F6FFEC /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
+		180F23B02B18B4B800F6FFEC /* EmployeeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeManager.swift; sourceTree = "<group>"; };
+		180F23B32B18B4D900F6FFEC /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		180F23B72B18B51900F6FFEC /* EmployeeListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVCExtension.swift; sourceTree = "<group>"; };
+		180F23BA2B18B53A00F6FFEC /* CreateEmployeeVCExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeVCExtensions.swift; sourceTree = "<group>"; };
+		180F23BC2B18B54C00F6FFEC /* EmployeeDetailExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailExtensions.swift; sourceTree = "<group>"; };
+		180F23BE2B18B57D00F6FFEC /* CreateEmployeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEmployeeVC.swift; sourceTree = "<group>"; };
+		180F23C02B18B5A900F6FFEC /* EmployeeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVC.swift; sourceTree = "<group>"; };
+		180F23CE2B19B7FA00F6FFEC /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
+		180F23D02B19B8D900F6FFEC /* CDEmployeeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEmployeeExtension.swift; sourceTree = "<group>"; };
+		180F23D32B19B90F00F6FFEC /* CDPassportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPassportExtension.swift; sourceTree = "<group>"; };
+		185B06FD2B2B71EA00F11F96 /* CoreDataDeepDive 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataDeepDive 2.xcdatamodel"; sourceTree = "<group>"; };
+		185B06FE2B2C2CDA00F11F96 /* DepartmentDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDataRepository.swift; sourceTree = "<group>"; };
+		185B07002B2C2D1400F11F96 /* CDDepartmentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDepartmentExtension.swift; sourceTree = "<group>"; };
+		185B07022B2C2D4400F11F96 /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
+		185B07042B2C349B00F11F96 /* DepartmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentManager.swift; sourceTree = "<group>"; };
+		185B07062B2C382600F11F96 /* DepartmentListTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListTC.swift; sourceTree = "<group>"; };
+		185B07082B2C384B00F11F96 /* DepartmentListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListVCExtension.swift; sourceTree = "<group>"; };
+		185B070A2B2C38CF00F11F96 /* DepartmentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListVC.swift; sourceTree = "<group>"; };
+		186255BB2B285AB400AADE2A /* CDVehicleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDVehicleExtension.swift; sourceTree = "<group>"; };
+		186255BD2B285B8C00AADE2A /* VehicleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleManager.swift; sourceTree = "<group>"; };
+		186255BF2B285C3300AADE2A /* VehicleListTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListTC.swift; sourceTree = "<group>"; };
+		186255C12B285E8400AADE2A /* VehicleListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListVCExtension.swift; sourceTree = "<group>"; };
+		186255C32B28614700AADE2A /* VehicleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleListVC.swift; sourceTree = "<group>"; };
+		186255C52B28CC8000AADE2A /* VehicleTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTC.swift; sourceTree = "<group>"; };
+		18C158DC2B2848210086679F /* VehicleDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataRepository.swift; sourceTree = "<group>"; };
+		18E3B0F92B1DEFAE00F8053A /* BaseDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataRepository.swift; sourceTree = "<group>"; };
+		18E3B0FB2B1DF35F00F8053A /* CDRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDRecord.swift; sourceTree = "<group>"; };
+		18E3B0FD2B1DF84200F8053A /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		18E3B0FF2B1DFA1B00F8053A /* PassportDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportDataRepository.swift; sourceTree = "<group>"; };
+		18E3B1012B1E0DDA00F8053A /* PassportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportManager.swift; sourceTree = "<group>"; };
+		18E3B1032B1E0E6400F8053A /* PassportListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportListVC.swift; sourceTree = "<group>"; };
+		18E3B1052B1E0ED500F8053A /* PassportListVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportListVCExtension.swift; sourceTree = "<group>"; };
+		18E3B1072B1E0EFF00F8053A /* PassportListTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportListTC.swift; sourceTree = "<group>"; };
+		18E3B10A2B1E0F1F00F8053A /* EmployeeListTC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListTC.swift; sourceTree = "<group>"; };
+		18E3B1102B20982100F8053A /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +176,13 @@
 		180F23732B1880D800F6FFEC /* CoreDataDeepDive */ = {
 			isa = PBXGroup;
 			children = (
-				180F23742B1880D800F6FFEC /* AppDelegate.swift */,
+				180F23AE2B18B46B00F6FFEC /* Constants */,
+				180F23AF2B18B49F00F6FFEC /* CoreDataSupportFiles */,
+				180F23B22B18B4BB00F6FFEC /* Managers */,
+				180F23B52B18B4DF00F6FFEC /* Models */,
+				180F23B62B18B4FC00F6FFEC /* Controllers */,
 				180F23762B1880D800F6FFEC /* SceneDelegate.swift */,
-				180F23782B1880D800F6FFEC /* ViewController.swift */,
+				180F23742B1880D800F6FFEC /* AppDelegate.swift */,
 				180F237A2B1880D800F6FFEC /* Main.storyboard */,
 				180F23802B1880D900F6FFEC /* Assets.xcassets */,
 				180F23822B1880D900F6FFEC /* LaunchScreen.storyboard */,
@@ -128,6 +207,111 @@
 				180F239A2B1880D900F6FFEC /* CoreDataDeepDiveUITestsLaunchTests.swift */,
 			);
 			path = CoreDataDeepDiveUITests;
+			sourceTree = "<group>";
+		};
+		180F23AB2B18AD4900F6FFEC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				18E3B0F92B1DEFAE00F8053A /* BaseDataRepository.swift */,
+				180F23A92B18AD3400F6FFEC /* EmployeeDataRepository.swift */,
+				18E3B0FF2B1DFA1B00F8053A /* PassportDataRepository.swift */,
+				18C158DC2B2848210086679F /* VehicleDataRepository.swift */,
+				185B06FE2B2C2CDA00F11F96 /* DepartmentDataRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		180F23AE2B18B46B00F6FFEC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				180F23AC2B18B46600F6FFEC /* SegueIdentifier.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		180F23AF2B18B49F00F6FFEC /* CoreDataSupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				180F23A72B1885A400F6FFEC /* PersistentStorage.swift */,
+				180F23AB2B18AD4900F6FFEC /* Repository */,
+				180F23D22B19B8DF00F6FFEC /* Extentions */,
+			);
+			path = CoreDataSupportFiles;
+			sourceTree = "<group>";
+		};
+		180F23B22B18B4BB00F6FFEC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				180F23B02B18B4B800F6FFEC /* EmployeeManager.swift */,
+				18E3B1012B1E0DDA00F8053A /* PassportManager.swift */,
+				186255BD2B285B8C00AADE2A /* VehicleManager.swift */,
+				185B07042B2C349B00F11F96 /* DepartmentManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		180F23B52B18B4DF00F6FFEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18E3B0FD2B1DF84200F8053A /* Record.swift */,
+				180F23B32B18B4D900F6FFEC /* Employee.swift */,
+				180F23CE2B19B7FA00F6FFEC /* Passport.swift */,
+				18E3B1102B20982100F8053A /* Vehicle.swift */,
+				185B07022B2C2D4400F11F96 /* Department.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		180F23B62B18B4FC00F6FFEC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18E3B1092B1E0F0200F8053A /* TableViewCell */,
+				180F23B92B18B51B00F6FFEC /* Extentions */,
+				180F23782B1880D800F6FFEC /* EmployeeDetailVC.swift */,
+				180F23BE2B18B57D00F6FFEC /* CreateEmployeeVC.swift */,
+				180F23C02B18B5A900F6FFEC /* EmployeeListVC.swift */,
+				18E3B1032B1E0E6400F8053A /* PassportListVC.swift */,
+				186255C32B28614700AADE2A /* VehicleListVC.swift */,
+				185B070A2B2C38CF00F11F96 /* DepartmentListVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		180F23B92B18B51B00F6FFEC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				180F23B72B18B51900F6FFEC /* EmployeeListVCExtension.swift */,
+				18E3B1052B1E0ED500F8053A /* PassportListVCExtension.swift */,
+				186255C12B285E8400AADE2A /* VehicleListVCExtension.swift */,
+				185B07082B2C384B00F11F96 /* DepartmentListVCExtension.swift */,
+				180F23BA2B18B53A00F6FFEC /* CreateEmployeeVCExtensions.swift */,
+				180F23BC2B18B54C00F6FFEC /* EmployeeDetailExtensions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		180F23D22B19B8DF00F6FFEC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				18E3B0FB2B1DF35F00F8053A /* CDRecord.swift */,
+				180F23D02B19B8D900F6FFEC /* CDEmployeeExtension.swift */,
+				180F23D32B19B90F00F6FFEC /* CDPassportExtension.swift */,
+				186255BB2B285AB400AADE2A /* CDVehicleExtension.swift */,
+				185B07002B2C2D1400F11F96 /* CDDepartmentExtension.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		18E3B1092B1E0F0200F8053A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18E3B10A2B1E0F1F00F8053A /* EmployeeListTC.swift */,
+				18E3B1072B1E0EFF00F8053A /* PassportListTC.swift */,
+				186255BF2B285C3300AADE2A /* VehicleListTC.swift */,
+				185B07062B2C382600F11F96 /* DepartmentListTC.swift */,
+				186255C52B28CC8000AADE2A /* VehicleTC.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +445,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180F23792B1880D800F6FFEC /* ViewController.swift in Sources */,
+				18E3B1112B20982100F8053A /* Vehicle.swift in Sources */,
+				180F23792B1880D800F6FFEC /* EmployeeDetailVC.swift in Sources */,
+				186255BE2B285B8C00AADE2A /* VehicleManager.swift in Sources */,
+				18E3B1082B1E0EFF00F8053A /* PassportListTC.swift in Sources */,
+				18E3B10B2B1E0F1F00F8053A /* EmployeeListTC.swift in Sources */,
+				185B07052B2C349B00F11F96 /* DepartmentManager.swift in Sources */,
+				18E3B0FC2B1DF35F00F8053A /* CDRecord.swift in Sources */,
+				18E3B1002B1DFA1B00F8053A /* PassportDataRepository.swift in Sources */,
+				180F23B42B18B4D900F6FFEC /* Employee.swift in Sources */,
+				180F23B82B18B51900F6FFEC /* EmployeeListVCExtension.swift in Sources */,
+				186255C22B285E8400AADE2A /* VehicleListVCExtension.swift in Sources */,
+				18E3B1042B1E0E6400F8053A /* PassportListVC.swift in Sources */,
+				185B070B2B2C38CF00F11F96 /* DepartmentListVC.swift in Sources */,
 				180F23752B1880D800F6FFEC /* AppDelegate.swift in Sources */,
 				180F237F2B1880D800F6FFEC /* CoreDataDeepDive.xcdatamodeld in Sources */,
+				186255C62B28CC8000AADE2A /* VehicleTC.swift in Sources */,
+				180F23B12B18B4B800F6FFEC /* EmployeeManager.swift in Sources */,
+				185B07092B2C384B00F11F96 /* DepartmentListVCExtension.swift in Sources */,
+				180F23A82B1885A400F6FFEC /* PersistentStorage.swift in Sources */,
+				180F23AD2B18B46600F6FFEC /* SegueIdentifier.swift in Sources */,
+				180F23D42B19B90F00F6FFEC /* CDPassportExtension.swift in Sources */,
+				186255BC2B285AB400AADE2A /* CDVehicleExtension.swift in Sources */,
+				180F23D12B19B8D900F6FFEC /* CDEmployeeExtension.swift in Sources */,
 				180F23772B1880D800F6FFEC /* SceneDelegate.swift in Sources */,
+				180F23AA2B18AD3400F6FFEC /* EmployeeDataRepository.swift in Sources */,
+				18E3B0FA2B1DEFAE00F8053A /* BaseDataRepository.swift in Sources */,
+				18E3B0FE2B1DF84200F8053A /* Record.swift in Sources */,
+				185B07032B2C2D4400F11F96 /* Department.swift in Sources */,
+				186255C42B28614700AADE2A /* VehicleListVC.swift in Sources */,
+				180F23BB2B18B53A00F6FFEC /* CreateEmployeeVCExtensions.swift in Sources */,
+				180F23BF2B18B57D00F6FFEC /* CreateEmployeeVC.swift in Sources */,
+				180F23CF2B19B7FA00F6FFEC /* Passport.swift in Sources */,
+				185B07072B2C382600F11F96 /* DepartmentListTC.swift in Sources */,
+				18E3B1022B1E0DDA00F8053A /* PassportManager.swift in Sources */,
+				185B06FF2B2C2CDA00F11F96 /* DepartmentDataRepository.swift in Sources */,
+				185B07012B2C2D1400F11F96 /* CDDepartmentExtension.swift in Sources */,
+				186255C02B285C3300AADE2A /* VehicleListTC.swift in Sources */,
+				18C158DD2B2848210086679F /* VehicleDataRepository.swift in Sources */,
+				180F23C12B18B5A900F6FFEC /* EmployeeListVC.swift in Sources */,
+				18E3B1062B1E0ED500F8053A /* PassportListVCExtension.swift in Sources */,
+				180F23BD2B18B54D00F6FFEC /* EmployeeDetailExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,9 +837,10 @@
 		180F237D2B1880D800F6FFEC /* CoreDataDeepDive.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				185B06FD2B2B71EA00F11F96 /* CoreDataDeepDive 2.xcdatamodel */,
 				180F237E2B1880D800F6FFEC /* CoreDataDeepDive.xcdatamodel */,
 			);
-			currentVersion = 180F237E2B1880D800F6FFEC /* CoreDataDeepDive.xcdatamodel */;
+			currentVersion = 185B06FD2B2B71EA00F11F96 /* CoreDataDeepDive 2.xcdatamodel */;
 			path = CoreDataDeepDive.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

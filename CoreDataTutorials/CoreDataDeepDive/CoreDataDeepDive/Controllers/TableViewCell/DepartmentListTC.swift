@@ -8,6 +8,7 @@
 import UIKit
 
 class DepartmentListTC: UITableViewCell {
+    @IBOutlet weak var lblDepartmentName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

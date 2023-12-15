@@ -41,7 +41,7 @@ final class PersistentStorage {
     func fetchManagedObject<T: NSManagedObject>(managedObject: T.Type) -> [T]?
     {
         do {
-            guard let result = try PersistentStorage.shared.context.fetch(managedObject.fetchRequest()) as? [T] else {return nil}
+            guard let result = try context.fetch(managedObject.fetchRequest()) as? [T] else {return nil}
             
             return result
 

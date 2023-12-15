@@ -8,6 +8,8 @@
 import Foundation
 
 struct SegueIdentifier {
-    static let navigateToEmployeeList = "navigateToEmployeeList"
-    static let navigateToEmployeeDetailView = "navigateToDetailedEmployeeView"
+    static let navigateToDetailView = "navigateToDetailView"
+    static let showPassportDetails = "showPassportDetails"
+    static let showVehicleDetails = "showVehicleDetails"
+    static let showDepartmentetails = "showDepartmentetails"
 }

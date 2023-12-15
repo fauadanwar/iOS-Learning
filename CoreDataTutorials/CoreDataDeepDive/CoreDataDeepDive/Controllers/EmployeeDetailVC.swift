@@ -7,58 +7,106 @@
 
 import UIKit
 
-class DetailVC: UIViewController {
-
-    @IBOutlet weak var imgProfilePicture: UIImageView!
-    @IBOutlet weak var txtEmployeeName: UITextField!
-    @IBOutlet weak var txtEmployeeEmailId: UITextField!
-
+class EmployeeDetailVC: UIViewController {
+    
     private let manager = EmployeeManager()
     var selectedEmployee: Employee? = nil
 
+    @IBOutlet weak var txtPassportPlaceOfIssue: UITextField!
+    @IBOutlet weak var txtPassportNumber: UITextField!
+    @IBOutlet weak var txtEmployeeEmail: UITextField!
+    @IBOutlet weak var txtEmployeeName: UITextField!
+    @IBOutlet weak var txtDeaprtmentName: UITextField!
+    @IBOutlet weak var imgEmployeeProfilePicture: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    var vehicles : [Vehicle]? = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewWillSetUp()
+
         // Do any additional setup after loading the view.
+        viewWillSetUp()
     }
 
     func viewWillSetUp()
     {
         self.txtEmployeeName.text = selectedEmployee?.name
-        self.txtEmployeeEmailId.text = selectedEmployee?.email
-        self.imgProfilePicture.image = UIImage(data: (selectedEmployee?.profilePicture)!)
+        self.txtEmployeeEmail.text = selectedEmployee?.email
+        self.txtPassportNumber.text = selectedEmployee?.passport?.passportNumber
+        self.txtPassportPlaceOfIssue.text = selectedEmployee?.passport?.placeOfIssue
+        self.imgEmployeeProfilePicture.image = UIImage(data: (selectedEmployee?.profilePicture)!)
+        self.txtDeaprtmentName.text = selectedEmployee?.department?.name
+        self.vehicles = selectedEmployee?.vehicles
+        tableView.tableFooterView = UIView()
+        tableView.reloadData()
     }
-
-    // MARK: Update button action
+    
     @IBAction func updateButtonTapped(_ sender: Any) {
-
-        let employee = Employee(name: self.txtEmployeeName.text, email: self.txtEmployeeEmailId.text, profilePicture: self.imgProfilePicture.image?.pngData(), id: selectedEmployee!.id)
-
-        if(manager.updateEmployee(employee: employee))
-        {
-           displayAlert(alertMessage: "Record Updated")
-        }else
-        {
-            displayErrorAlert()
+        selectedEmployee?.name = self.txtEmployeeName.text!
+        selectedEmployee?.email = self.txtEmployeeEmail.text!
+        selectedEmployee?.passport?.passportNumber = self.txtPassportNumber.text!
+        selectedEmployee?.passport?.placeOfIssue = self.txtPassportPlaceOfIssue.text
+        selectedEmployee?.profilePicture = (self.imgEmployeeProfilePicture.image?.pngData())!
+        selectedEmployee?.vehicles = self.vehicles
+        selectedEmployee?.department?.name = self.txtDeaprtmentName.text!
+        guard  manager.updateEmployee(record: selectedEmployee!) else {
+            return
         }
+        displayAlert(message: "Record Updated")
 
     }
 
-    // MARK: Delete button action
     @IBAction func deleteButtonTapped(_ sender: Any) {
 
-        if(manager.deleteEmployee(id: selectedEmployee!.id))
+        if(manager.deleteEmployee(byIdentifier: selectedEmployee!.id))
         {
-            displayAlert(alertMessage: "Record deleted")
-        }
-        else
+            displayAlert(message: "Employee record deleted")
+        }else
         {
-            displayErrorAlert()
+            debugPrint("Delete failed")
         }
-
     }
 
-    // MARK: Select image tap gesture action
+    @IBAction func addVehicleButtonTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Add Vehicle", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Name"
+        }
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Type"
+        }
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Number"
+        }
+        
+        let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] _ in
+            guard let self = self,
+                  let nameTextField = alert.textFields?.first,
+                  let typeTextField = alert.textFields?[1],
+                  let numberTextField = alert.textFields?.last,
+                  let name = nameTextField.text,
+                  let type = typeTextField.text,
+                  let number = numberTextField.text else {
+                return
+            }
+            
+            let newVehicle = Vehicle(_id: UUID(), _name: name, _type: type, _number: number)
+            self.vehicles?.append(newVehicle)
+            self.tableView.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(addAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func selectImage(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.sourceType = .savedPhotosAlbum
@@ -66,27 +114,15 @@ class DetailVC: UIViewController {
         present(picker, animated: true)
     }
 
-    // MARK: Private functions
-    private func displayAlert(alertMessage:String)
+    private func displayAlert(message: String)
     {
-        let alert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: .alert)
-
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
             self.navigationController?.popViewController(animated: true)
         }
         alert.addAction(okAction)
         self.present(alert, animated: true)
     }
-
-    private func displayErrorAlert()
-    {
-        let errorAlert = UIAlertController(title: "Alert", message: "Something went wrong, please try again later", preferredStyle: .alert)
-
-        let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
-        errorAlert.addAction(okAction)
-        self.present(errorAlert, animated: true)
-    }
-    
     /*
      // MARK: - Navigation
 

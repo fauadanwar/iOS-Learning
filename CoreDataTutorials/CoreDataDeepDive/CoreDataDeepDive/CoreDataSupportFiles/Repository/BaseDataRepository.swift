@@ -11,7 +11,7 @@ import CoreData
 protocol BaseDataRepository {
 
     associatedtype CDT where CDT: NSFetchRequestResult, CDT: NSManagedObject, CDT: CDRecord
-    associatedtype T where T: BaseModel
+    associatedtype T where T: Record
     
     func create(record: T)
     func getAll() -> [T]?
@@ -57,8 +57,7 @@ extension BaseDataRepository {
         PersistentStorage.shared.saveContext()
         return true
     }
-
-
+    
     private func getCDRecord(byIdentifier id: UUID) -> CDT?
     {
         let fetchRequest = NSFetchRequest<CDT>(entityName: String(describing: CDT.self))
