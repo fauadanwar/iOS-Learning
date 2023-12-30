@@ -30,6 +30,7 @@
 		180F23CF2B19B7FA00F6FFEC /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23CE2B19B7FA00F6FFEC /* Passport.swift */; };
 		180F23D12B19B8D900F6FFEC /* CDEmployeeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23D02B19B8D900F6FFEC /* CDEmployeeExtension.swift */; };
 		180F23D42B19B90F00F6FFEC /* CDPassportExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F23D32B19B90F00F6FFEC /* CDPassportExtension.swift */; };
+		185466342B3B106A00801262 /* EmployeeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185466332B3B106A00801262 /* EmployeeProvider.swift */; };
 		185B06FF2B2C2CDA00F11F96 /* DepartmentDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B06FE2B2C2CDA00F11F96 /* DepartmentDataRepository.swift */; };
 		185B07012B2C2D1400F11F96 /* CDDepartmentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07002B2C2D1400F11F96 /* CDDepartmentExtension.swift */; };
 		185B07032B2C2D4400F11F96 /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185B07022B2C2D4400F11F96 /* Department.swift */; };
@@ -101,6 +102,7 @@
 		180F23CE2B19B7FA00F6FFEC /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
 		180F23D02B19B8D900F6FFEC /* CDEmployeeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEmployeeExtension.swift; sourceTree = "<group>"; };
 		180F23D32B19B90F00F6FFEC /* CDPassportExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPassportExtension.swift; sourceTree = "<group>"; };
+		185466332B3B106A00801262 /* EmployeeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeProvider.swift; sourceTree = "<group>"; };
 		185B06FD2B2B71EA00F11F96 /* CoreDataDeepDive 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataDeepDive 2.xcdatamodel"; sourceTree = "<group>"; };
 		185B06FE2B2C2CDA00F11F96 /* DepartmentDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDataRepository.swift; sourceTree = "<group>"; };
 		185B07002B2C2D1400F11F96 /* CDDepartmentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDDepartmentExtension.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		180F23B62B18B4FC00F6FFEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				185466352B3B107100801262 /* DataProvider */,
 				18E3B1092B1E0F0200F8053A /* TableViewCell */,
 				180F23B92B18B51B00F6FFEC /* Extentions */,
 				180F23782B1880D800F6FFEC /* EmployeeDetailVC.swift */,
@@ -300,6 +303,14 @@
 				185B07002B2C2D1400F11F96 /* CDDepartmentExtension.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		185466352B3B107100801262 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				185466332B3B106A00801262 /* EmployeeProvider.swift */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		18E3B1092B1E0F0200F8053A /* TableViewCell */ = {
@@ -483,6 +494,7 @@
 				185B07012B2C2D1400F11F96 /* CDDepartmentExtension.swift in Sources */,
 				186255C02B285C3300AADE2A /* VehicleListTC.swift in Sources */,
 				18C158DD2B2848210086679F /* VehicleDataRepository.swift in Sources */,
+				185466342B3B106A00801262 /* EmployeeProvider.swift in Sources */,
 				180F23C12B18B5A900F6FFEC /* EmployeeListVC.swift in Sources */,
 				18E3B1062B1E0ED500F8053A /* PassportListVCExtension.swift in Sources */,
 				180F23BD2B18B54D00F6FFEC /* EmployeeDetailExtensions.swift in Sources */,

@@ -11,9 +11,14 @@ class EmployeeListVC: UIViewController {
 
     @IBOutlet weak var tblEmployeeList: UITableView!
 
-    var employees : [Employee]? = nil
-    private var manager = EmployeeManager()
+//    var employees : [Employee]? = nil
+//    private var manager = EmployeeManager()
     private let refreshControl = UIRefreshControl()
+    lazy var employeeDataProvider: EmployeeProvider =
+    {
+        let dataProvider = EmployeeProvider(With: self)
+        return dataProvider
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +34,11 @@ class EmployeeListVC: UIViewController {
     }
     
     func viewWillSetUp() {
-        self.employees = manager.getAllEmployee()
-        if(employees != nil && employees?.count != 0)
-        {
-            self.tblEmployeeList.reloadData()
-        }
+//        self.employees = manager.getAllEmployee()
+//        if(employees != nil && employees?.count != 0)
+//        {
+//            self.tblEmployeeList.reloadData()
+//        }
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         self.tblEmployeeList.refreshControl = refreshControl
@@ -41,7 +46,7 @@ class EmployeeListVC: UIViewController {
     
     
     @objc func refresh(_ sender: AnyObject) {
-        self.employees = manager.getAllEmployee()
+//        self.employees = manager.getAllEmployee()
         self.tblEmployeeList.reloadData()
         self.refreshControl.endRefreshing()
     }
@@ -55,7 +60,9 @@ class EmployeeListVC: UIViewController {
         {
             let employeeDetailView = segue.destination as? EmployeeDetailVC
             guard employeeDetailView != nil else { return }
-            employeeDetailView?.selectedEmployee = self.employees![self.tblEmployeeList.indexPathForSelectedRow!.row]
+            let employee = employeeDataProvider.fetchedResultController.object(at: self.tblEmployeeList.indexPathForSelectedRow!).convertToRecord()
+
+            employeeDetailView?.selectedEmployee = employee
         }
     }
 }

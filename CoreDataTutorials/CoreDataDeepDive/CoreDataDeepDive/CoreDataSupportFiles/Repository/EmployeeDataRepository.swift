@@ -25,7 +25,8 @@ struct EmployeeDataRepository : EmployeeRepository
         if let department = record.department
         {
             let cdDepartment = CDDepartment(context: PersistentStorage.shared.context)
-            cdDepartment.name = record.department?.name
+            cdDepartment.id = department.id
+            cdDepartment.name = department.name
             cdRecord.toDepartment = cdDepartment
         }
         if let passport = record.passport
@@ -76,7 +77,7 @@ struct EmployeeDataRepository : EmployeeRepository
         else if let department = record.department
         {
             let cdDepartment = CDDepartment(context: PersistentStorage.shared.context)
-            cdDepartment.name = record.department?.name
+            cdDepartment.name =  department.name
             cdRecord.toDepartment = cdDepartment
         }
         

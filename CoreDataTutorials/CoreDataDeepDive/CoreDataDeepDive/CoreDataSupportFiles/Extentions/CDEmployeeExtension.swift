@@ -22,6 +22,12 @@ extension CDEmployee: CDRecord {
             }
         }
         
-        return Employee(_id: (self.id)!, _name: self.name!, _email: self.email!, _profilePicture: self.profilePicture!, _passport: self.toPassport?.convertToRecord(), _vehicles: vehicles)
+        var department: Department?
+        if let toDepartment = self.toDepartment
+        {
+            department = Department(_id: toDepartment.id!, _name: toDepartment.name)
+        }
+        
+        return Employee(_id: (self.id)!, _name: self.name!, _email: self.email!, _profilePicture: self.profilePicture!, _passport: self.toPassport?.convertToRecord(), _vehicles: vehicles, _department: department)
     }
 }

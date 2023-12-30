@@ -18,6 +18,10 @@ struct EmployeeManager
         {
             record.passport = nil
         }
+        if(validateDepartment(department: record.department) == false)
+        {
+            record.department = nil
+        }
         _employeeRepository.create(record: record)
     }
 
@@ -39,6 +43,16 @@ struct EmployeeManager
     private func validatePassport(passport: Passport?) -> Bool
     {
         if(passport == nil || passport?.passportNumber?.isEmpty == true || passport?.placeOfIssue?.isEmpty == true)
+        {
+            return false
+        }
+
+        return true
+    }
+    
+    private func validateDepartment(department: Department?) -> Bool
+    {
+        if(department == nil || department?.name?.isEmpty == true)
         {
             return false
         }
