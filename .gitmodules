@@ -1,0 +1,3 @@
+[submodule "GitSubmoduleSample/FZImageCache"]
+	path = GitSubmoduleSample/FZImageCache
+	url = https://github.com/fauadanwar/FZImageCache.git
